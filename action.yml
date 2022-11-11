@@ -1,0 +1,20 @@
+name: "Mirroring Repository"
+author: Suddhasattwa Mukherjee
+description: "Mirror a repository to AWS CodeCommit, Original Source pixta-dev/repository-mirroring-action"
+branding:
+  icon: "archive"
+  color: "thumbs-up"
+inputs:
+  ssh_private_key:
+    description: "SSH private key for ssh connection to the target repository"
+    required: true
+  target_repo_url:
+    description: "Target url"
+    required: true
+  ssh_username:
+    description: "Username for ssh connection"
+    required: true
+    default: "git"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
