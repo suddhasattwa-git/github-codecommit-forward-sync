@@ -7,5 +7,5 @@ RUN git lfs install
 
 COPY mirror.sh /mirror.sh
 COPY setup-ssh.sh /setup-ssh.sh
-
+chmod +x mirror.sh
 ENTRYPOINT ["/mirror.sh"]
